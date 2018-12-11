@@ -6,22 +6,23 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
 
+        /**
+         * 1行ごとに読み込んだ。
+         * 次回　これのクラス化
+         */
         try {
-            File file = new File("map.txt");
-            FileReader filereader = new FileReader(file);
+            BufferedReader br = new BufferedReader(new FileReader("map.txt"));
+            while (true) {
+                String line = br.readLine();
+                if (line == null) {
+                    break;
+                }
+                String lineer = line.toUpperCase();
+                System.out.println(lineer);
 
-            int ch = filereader.read();
-            while(ch != -1){
-                System.out.print((char)ch);
-
-                ch = filereader.read();
             }
-
-        } catch (FileNotFoundException e) {
-            System.out.println(e);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
