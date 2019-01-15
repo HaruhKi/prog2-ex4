@@ -17,8 +17,8 @@ public class Main {
                 if (line == null) {
                     break;
                 }
-                String lineer = line.toUpperCase();
-                System.out.println(lineer);
+                String liner = line.toUpperCase();
+                System.out.println(liner);
 
             }
         } catch (IOException e) {
